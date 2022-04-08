@@ -20,7 +20,7 @@ from datetime import timedelta
 from pygame import mixer
 
 def drink_water():
-    for dt in datetime_range(timedelta(hours=9, minutes=0), timedelta(hours=23, minutes=0), timedelta(minutes=35)):
+    for dt in datetime_range(timedelta(hours=9, minutes=0), timedelta(hours=17, minutes=0), timedelta(minutes=35)):
         dt1 = str(dt)
         if now1 == dt1:
             mixer.music.load("water.mp3")
@@ -35,7 +35,7 @@ def drink_water():
 
 def eyes_exr():
     # Eye Exercise Remainder
-    for et in datetime_range(timedelta(hours=9, minutes=0), timedelta(hours=23, minutes=0), timedelta(minutes=25)):
+    for et in datetime_range(timedelta(hours=9, minutes=0), timedelta(hours=17, minutes=0), timedelta(minutes=25)):
         et1 = str(et)
         if now1 == et1:
             mixer.music.load("eyes.mp3")
@@ -50,7 +50,7 @@ def eyes_exr():
 
 def physical_ex():
     # Physical Exercise Remainder
-    for pt in datetime_range(timedelta(hours=9, minutes=0), timedelta(hours=23, minutes=0), timedelta(minutes=45)):
+    for pt in datetime_range(timedelta(hours=9, minutes=0), timedelta(hours=17, minutes=0), timedelta(minutes=45)):
         pt1 = str(pt)
         if now1 == pt1:
             mixer.music.load("physical.mp3")
@@ -76,7 +76,7 @@ if __name__ == "__main__":
     now = datetime.now()
     mixer.init()
 
-    while(now.hour>=9 and now.hour<=23):
+    while(now.hour>=9 and now.hour<=17):
         now = datetime.now()
         now1 = now.strftime("%H:%M:%S")
         drink_water()
